@@ -1,5 +1,3 @@
-# DARK THEME
-
 APP_BG = "#596690"
 SIDEBAR_BG = "#382F64"
 
