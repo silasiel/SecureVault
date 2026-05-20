@@ -29,12 +29,14 @@ def ask_password(
     TEXT_PRIMARY,
     TEXT_SECONDARY,
     ACCENT,
-    ACCENT_TEXT
+    ACCENT_TEXT,
+    title="Password",
+    prompt="Enter Password"
 ):
 
     win = tk.Toplevel(root)
 
-    win.title("Password")
+    win.title(title)
     win.geometry("350x180")
     win.configure(bg=APP_BG)
 
@@ -44,7 +46,7 @@ def ask_password(
 
     tk.Label(
         win,
-        text="Enter Password",
+        text=prompt,
         bg=APP_BG,
         fg=TEXT_PRIMARY,
         font=("Segoe UI", 11)

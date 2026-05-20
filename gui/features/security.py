@@ -1,4 +1,5 @@
 import time
+import os
 
 failed_attempts = {}
 locked_folders = {}
@@ -52,3 +53,34 @@ def is_folder_locked(folder):
         return False, 0
 
     return True, remaining
+
+def secure_delete_file(file_path, passes=3):
+
+    if not os.path.exists(file_path):
+        return False
+
+    try:
+
+        length = os.path.getsize(file_path)
+
+        for _ in range(passes):
+
+            with open(file_path, "r+b") as f:
+
+                f.seek(0)
+
+                f.write(os.urandom(length))
+
+                f.flush()
+
+                os.fsync(f.fileno())
+
+        os.remove(file_path)
+
+        return True
+
+    except Exception as e:
+
+        print("SHRED ERROR:", e)
+
+        return False

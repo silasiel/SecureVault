@@ -168,7 +168,9 @@ def open_folder(folder):
             TEXT_PRIMARY,
             TEXT_SECONDARY,
             ACCENT,
-            ACCENT_TEXT
+            ACCENT_TEXT,
+            title="Folder Password",
+            prompt=f"Enter password for '{folder}'"
         )
 
         if not pwd:
@@ -365,18 +367,72 @@ def decrypt_file(file):
 
 # DELETE
 
-def delete_selected_file(file):
+def authorize_folder_password(folder):
 
-    delete_file(current_folder, file)
+    result = verify_folder_password(folder, "")
 
-    log_action(
-        LOGS_DIR,
-        "DELETE",
-        f"{current_folder}/{file}"
+    if result is None:
+        # Folder has no password set, allow deletion.
+        return True
+
+    pwd = ask_password(
+        root,
+        APP_BG,
+        TEXT_PRIMARY,
+        TEXT_SECONDARY,
+        ACCENT,
+        ACCENT_TEXT,
+        title="Confirm Delete",
+        prompt=f"Enter password for folder '{folder}'"
     )
 
-    refresh_files()
+    if not pwd:
+        return False
 
+    if not verify_folder_password(folder, pwd):
+        messagebox.showerror(
+            "Access Denied",
+            "Incorrect password"
+        )
+        return False
+
+    return True
+
+
+def delete_selected_file(file):
+
+    if not current_folder:
+        messagebox.showerror(
+            "Error",
+            "No folder selected"
+        )
+        return
+
+    if not authorize_folder_password(current_folder):
+        return
+
+    path = os.path.join(
+        BASE_VAULT,
+        current_folder,
+        file
+    )
+
+    success = secure_delete_file(path)
+
+    if not success:
+        messagebox.showerror(
+            "Error",
+            "Secure delete failed"
+        )
+        return
+
+    delete_file(current_folder, file)
+    log_action(
+        LOGS_DIR,
+        "DELETE_FILE",
+        file
+    )
+    refresh_files()
 
 
 def delete_selected_folder(folder):
@@ -387,6 +443,9 @@ def delete_selected_folder(folder):
     )
 
     if not confirm:
+        return
+
+    if not authorize_folder_password(folder):
         return
 
     success = delete_folder(folder)
@@ -555,20 +614,30 @@ def refresh_files():
                 file,
                 APP_BG,
                 CARD_BG,
-                TEXT_PRIMARY
+                TEXT_PRIMARY,
+                ask_password
             )
         ).pack(side="left", padx=3)
 
         tk.Button(
             btn_frame,
-            text="Delete",
+            text="Shred",
             bg="#d9534f",
             fg="white",
             command=lambda file=f: delete_selected_file(file)
         ).pack(side="left", padx=3)
 
 
-# LAYOUT
+def run_import_backup():
+    if import_backup(
+        BASE_VAULT,
+        LOGS_DIR,
+        log_action
+    ):
+        refresh_folders()
+        refresh_files()
+
+
 root.grid_rowconfigure(0, weight=1)
 root.grid_columnconfigure(1, weight=1)
 
@@ -629,6 +698,7 @@ tk.Button(
     command=create_new_folder
 ).pack(fill="x", padx=10, pady=5)
 
+
 tk.Frame(
     sidebar,
     height=2,
@@ -637,6 +707,35 @@ tk.Frame(
 
 folder_list = tk.Frame(sidebar, bg=SIDEBAR_BG)
 folder_list.pack(fill="both", expand=True)
+
+
+tk.Frame(
+    sidebar,
+    height=2,
+    bg="#abadb1"
+).pack(fill="x", padx=10, pady=8)
+
+
+tk.Button(
+    sidebar,
+    text="Export Backup",
+    bg=ACCENT,
+    fg=ACCENT_TEXT,
+    command=lambda: export_backup(
+        BASE_VAULT,
+        LOGS_DIR,
+        log_action
+    )
+).pack(fill="x", padx=10, pady=5)
+
+
+tk.Button(
+    sidebar,
+    text="Import Backup",
+    bg=ACCENT,
+    fg=ACCENT_TEXT,
+    command=run_import_backup
+).pack(fill="x", padx=10, pady=5)
 
 
 # MAIN
