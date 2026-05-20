@@ -16,7 +16,7 @@
 void derive_key(const char *password, unsigned char *salt, unsigned char *key) {
     PKCS5_PBKDF2_HMAC(password, strlen(password),
                       salt, SALT_SIZE,
-                      10000,
+                      100000,
                       EVP_sha256(),
                       KEY_SIZE, key);
 }
@@ -189,6 +189,7 @@ int decrypt_file_aes(const char *input, const char *output, const char *password
 
     // LOG
     log_action("DECRYPT", input);
+    memset(key, 0, sizeof(key));  // Clearing key from memory
 
     return 0;
 }
