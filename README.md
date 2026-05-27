@@ -1,7 +1,20 @@
 # SecureVault
-SecureVault is a secure desktop file storage application that allows users to encrypt, organize, preview, and manage sensitive files through a simple graphical interface. The project combines the performance of C-based cryptography with the usability of a Python GUI to create a secure and accessible file protection system.  <br>
-## Developed by:
-This app was created in collaboration with Faizah Hafeez(@faizahhafeez2-code), Sakina Fatima Mirza(@sakinastlw110), and myself(@silasiel) under the team name "Cipher Syndicate" for a junior level technical competition conducted by our . <br>
+### Security Beyond Encryption
+
+SecureVault is a desktop-based encrypted file management system designed to securely store, organize, encrypt, and protect sensitive digital files. The application combines a Python-based graphical interface with a C-powered encryption backend using OpenSSL cryptography libraries.
+
+The project was built to address unauthorized access, accidental data leaks, insecure local storage, and weak file protection systems through modern encryption and security-focused system design. <br>
+# Product Overview
+
+SecureVault provides users with a secure desktop vault environment for handling confidential files locally while maintaining strong cryptographic security and usability.
+
+The system integrates:
+- AES-256-GCM authenticated encryption
+- PBKDF2-HMAC-SHA256 password key derivation
+- Intrusion detection systems
+- Secure file shredding
+- Encrypted backup export and recovery
+- Real-time encryption tracking. <br>
 
 # Features
 * AES-GCM file encryption using OpenSSL
