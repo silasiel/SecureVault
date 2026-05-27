@@ -156,26 +156,6 @@ Recovered Output File
 
 ---
 
-# Repository Structure
-
-```text
-SecureVault/
-│
-├── gui/
-├── backend/
-├── encryption/
-├── decryption/
-├── authentication/
-├── vault/
-├── logs/
-├── backups/
-├── tests/
-├── assets/
-└── README.md
-```
-
----
-
 # Installation
 
 ## Method 1 — Download Release
@@ -196,8 +176,8 @@ More Info → Run Anyway
 ### Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/securevault.git
-cd securevault
+git clone https://github.com/silasiel/SecureVault.git
+cd SecureVault
 ```
 
 ---
