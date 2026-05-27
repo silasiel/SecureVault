@@ -332,9 +332,10 @@ SecureVault supports secure information management practices by helping users pr
 
 | Contributor | Profile |
 |---|---|
+| Silasiel | [GitHub](https://github.com/silasiel) |
 | Faizah Hafeez | [GitHub](https://github.com/faizahhafeez2-code) |
 | Sakina Fatima Mirza | [GitHub](https://github.com/sakinastlw110) |
-| Silasiel | [GitHub](https://github.com/silasiel) |
+
 ---
 # Future Improvements
 
