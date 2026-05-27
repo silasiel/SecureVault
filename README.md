@@ -351,11 +351,11 @@ SecureVault supports secure information management practices by helping users pr
 
 # Contributors
 
-Developed by Cipher Syndicate:
-
-- Faizah Hafeez — `@faizahhafeez2-code`
-- Sakina Fatima Mirza — `@sakinastlw110`
-- Silasiel — `@silasiel`
+| Contributor | Profile |
+|---|---|
+| Faizah Hafeez | [GitHub](https://github.com/faizahhafeez2-code) |
+| Sakina Fatima Mirza | [GitHub](https://github.com/sakinastlw110) |
+| Silasiel | [GitHub](https://github.com/silasiel) |
 
 ---
 # Future Improvements
