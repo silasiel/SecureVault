@@ -1,94 +1,215 @@
 # SecureVault
-### Security Beyond Encryption
+### Secure Local File Encryption and Vault Management
 
-SecureVault is a desktop-based encrypted file management system designed to securely store, organize, encrypt, and protect sensitive digital files. The application combines a Python-based graphical interface with a C-powered encryption backend using OpenSSL cryptography libraries.
+SecureVault is a desktop-based encrypted file management system designed for secure local storage, encrypted file handling, and controlled access protection.
 
-The project was built to address unauthorized access, accidental data leaks, insecure local storage, and weak file protection systems through modern encryption and security-focused system design. <br>
-# Product Overview
+The application combines a Python-based desktop interface with a C/OpenSSL cryptographic backend to provide authenticated encryption, secure deletion workflows, intrusion monitoring, and encrypted recovery systems within a modular desktop architecture.
 
-SecureVault provides users with a secure desktop vault environment for handling confidential files locally while maintaining strong cryptographic security and usability.
+---
 
-The system integrates:
+# Table of Contents
+
+- [Overview](#overview)
+- [Core Capabilities](#core-capabilities)
+- [System Architecture](#system-architecture)
+- [Security Model](#security-model)
+  - [Cryptographic Security](#cryptographic-security)
+  - [Vault Protection Systems](#vault-protection-systems)
+- [Feature Breakdown](#feature-breakdown)
+  - [Encryption Pipeline](#encryption-pipeline)
+  - [Decryption Pipeline](#decryption-pipeline)
+- [Technologies Used](#technologies-used)
+- [Repository Structure](#repository-structure)
+- [Installation](#installation)
+  - [Method 1 — Download Release](#method-1--download-release)
+  - [Method 2 — Build From Source](#method-2--build-from-source)
+- [Packaging](#packaging)
+- [Performance and Optimization](#performance-and-optimization)
+- [Development Journey](#development-journey)
+- [UN Sustainable Development Goals](#un-sustainable-development-goals)
+- [Gallery](#gallery)
+- [Future Improvements](#future-improvements)
+- [Contributors](#contributors)
+- [License](#license)
+
+---
+
+# Overview
+
+SecureVault was developed to address:
+
+- Unauthorized local file access
+- Weak password-protected storage systems
+- Insecure file deletion practices
+- Lack of authenticated encryption in lightweight desktop vaults
+- Poor visibility into encryption workflows and intrusion attempts
+
+The platform focuses on strong cryptographic implementation, modular backend separation, responsive desktop usability, and practical security engineering.
+
+---
+
+# Core Capabilities
+
+| Capability | Description |
+|---|---|
+| AES-256-GCM Encryption | Authenticated encryption with integrity validation |
+| PBKDF2 Key Derivation | Password hardening using PBKDF2-HMAC-SHA256 |
+| Intrusion Detection | Failed-access monitoring and vault protection |
+| Secure File Shredding | Controlled irreversible deletion |
+| Encrypted Recovery | Export and restoration of encrypted backups |
+| Real-Time Tracking | Live encryption and decryption progress monitoring |
+| Threaded Processing | Background cryptographic execution |
+| Vault Search System | Live file filtering and lookup |
+
+---
+
+# System Architecture
+
+```text
++---------------------------------------------------+
+|                 Tkinter Desktop GUI               |
++---------------------------------------------------+
+|              Python Application Layer             |
++---------------------------------------------------+
+|        Vault Operations / File Management         |
++---------------------------------------------------+
+|            C Encryption Backend Layer             |
++---------------------------------------------------+
+|        OpenSSL AES-256-GCM Cryptography           |
++---------------------------------------------------+
+```
+
+The Python layer manages application workflows, vault state management, user interaction, and file operations.
+
+The C backend handles cryptographic execution through OpenSSL libraries to improve encryption performance, memory handling, and cryptographic reliability.
+
+---
+
+# Security Model
+
+## Cryptographic Security
+
 - AES-256-GCM authenticated encryption
 - PBKDF2-HMAC-SHA256 password key derivation
-- Intrusion detection systems
-- Secure file shredding
-- Encrypted backup export and recovery
-- Real-time encryption tracking. <br>
-# UN Sustainable Development Goal Alignment
+- Randomized initialization vectors
+- Randomized cryptographic salts
+- Authentication tag verification
+- Tamper detection during decryption
 
-## SDG 9 — Industry, Innovation and Infrastructure
+---
 
-SecureVault promotes secure and reliable digital infrastructure by providing a modern encrypted file management system focused on privacy, cybersecurity, and secure local data storage. The project combines modular software architecture, cryptographic security, and responsive desktop engineering practices to encourage safer digital environments and stronger cybersecurity awareness.
+## Vault Protection Systems
 
-## SDG 16 — Peace, Justice and Strong Institutions
-
-SecureVault supports secure digital information management by helping users protect sensitive files against unauthorized access, brute-force attacks, accidental exposure, and insecure deletion practices through modern encryption and security-focused system design
-
-# Core Features
-- AES-256-GCM authenticated encryption
-- PBKDF2-HMAC-SHA256 key derivation
-- Randomized salts and initialization vectors
 - Intrusion detection logging
-- Temporary vault lockouts
-- Secure file shredding
-- Encrypted backup export and recovery
-- Live file search and filtering
-- Real-time encryption progress tracking
-- Drag-and-drop uploads
-- Threaded encryption engine
-- Modular feature-based architecture <br>
-# System Architecture
-``` text
-Tkinter GUI
-      ↓
-Python Application Layer
-      ↓
-C Encryption Backend
-      ↓
-OpenSSL AES-256-GCM Engine
+- Temporary lockout protection
+- Failed-attempt monitoring
+- Password strength analysis
+- Controlled backup recovery
+- Secure overwrite-based shredding
+
+---
+
+# Feature Breakdown
+
+## Encryption Pipeline
+
+```text
+User File
+    ↓
+Password Validation
+    ↓
+PBKDF2 Key Derivation
+    ↓
+AES-256-GCM Encryption
+    ↓
+Secure Vault Storage
 ```
-The Python interface manages user interaction, vault operations, and application workflows, while the C backend performs cryptographic processing through OpenSSL for improved performance and security. <br> 
+
+---
+
+## Decryption Pipeline
+
+```text
+Encrypted Vault File
+        ↓
+Password Authentication
+        ↓
+Authentication Tag Validation
+        ↓
+AES-256-GCM Decryption
+        ↓
+Recovered Output File
+```
+
+---
+
 # Technologies Used
 
 | Technology | Purpose |
-|------------|---------|
-| Python | GUI and application logic |
+|---|---|
+| Python | Application logic and vault management |
 | Tkinter | Desktop graphical interface |
-| C | Cryptographic backend |
+| C | Cryptographic backend implementation |
 | OpenSSL | AES-GCM and PBKDF2 cryptography |
 | PyInstaller | Standalone executable packaging |
-| MinGW GCC | C compilation | <br>
+| MinGW GCC | Native backend compilation |
 
-# Installation Guide
-### Method 1 — Installer
-* Download SecureVault_Setup.exe from Releases
-* Run the installer
-* Launch SecureVault from Desktop or Start Menu
-* If Windows SmartScreen appears, click: More Info → Run Anyway 
-## Method-2: Clone Repository
+---
+
+# Repository Structure
+
+```text
+SecureVault/
+│
+├── gui/
+├── backend/
+├── encryption/
+├── decryption/
+├── authentication/
+├── vault/
+├── logs/
+├── backups/
+├── tests/
+├── assets/
+└── README.md
+```
+
+---
+
+# Installation
+
+## Method 1 — Download Release
+
+1. Download `SecureVault_Setup.exe` from Releases  
+2. Run the installer  
+3. Launch SecureVault from Desktop or Start Menu  
+4. If Windows SmartScreen appears:
+
+```text
+More Info → Run Anyway
+```
+
+---
+
+## Method 2 — Build From Source
+
+### Clone Repository
 
 ```bash
 git clone https://github.com/yourusername/securevault.git
-```
-
-```bash
 cd securevault
 ```
 
 ---
 
-## Build Encryption Backend
+### Build Encryption Backend
 
 ```bash
 mingw32-make clean
-```
-
-```bash
 mingw32-make
 ```
 
-This generates:
+Generated binary:
 
 ```text
 build/encryptor.exe
@@ -96,7 +217,7 @@ build/encryptor.exe
 
 ---
 
-## Install Dependencies
+### Install Python Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -104,7 +225,7 @@ pip install -r requirements.txt
 
 ---
 
-## Run Application
+### Run Application
 
 ```bash
 python gui/app.py
@@ -112,19 +233,13 @@ python gui/app.py
 
 ---
 
-# To Package with PyInstaller
+# Packaging
 
-## Remove Old Builds
+## Clean Previous Builds
 
 ```powershell
 Remove-Item -Recurse -Force dist
-```
-
-```powershell
 Remove-Item -Recurse -Force build
-```
-
-```powershell
 Remove-Item -Force *.spec
 ```
 
@@ -146,33 +261,71 @@ Copy-Item build\encryptor.exe dist\encryptor.exe
 
 ---
 
-# The Security Highlights
+# Performance and Optimization
 
-## Cryptographic Security
+- Background threaded encryption execution
+- Reduced UI blocking during cryptographic operations
+- Native OpenSSL-backed encryption performance
+- Modular subsystem separation
+- Live progress tracking architecture
+- Lightweight desktop deployment model
 
-- AES-256-GCM authenticated encryption
-- PBKDF2-HMAC-SHA256 key derivation
-- Randomized salts and IVs
-- Authentication tag verification
-- Tamper detection during decryption
+---
 
-## System Security
+# Development Journey
 
-- Intrusion detection logs
-- Temporary vault lockouts
-- Password strength analysis
-- Secure file shredding
-- Encrypted backup portability <br>
+This app was built for a junior-level technical competition conducted by our college. Every week, we attempted a series of given challenges that are showcased here:
 
-# Some Optimization Highlights
+## Week 1: The Blueprint Blitz
 
-- Modular feature-based architecture
-- Background threaded encryption
-- Responsive real-time progress tracking
-- Faster C/OpenSSL cryptographic backend
-- Standalone desktop packaging
-- Organized logging and live search systems <br>
-# 📁 SecureVault Screenshots
+- 1. The Rough Draft: A summary of our initial plan for the project was drafted. 
+- 2. The Tech Justification: We researched and finalized our tech stack.
+- 3. The Logic Flow Architecture: We created a simple wireframe to exhibit our idea.
+
+---
+
+## Week 2: The Deployment Powerplay
+
+- 1. The Motivation Track: https://youtu.be/2wOGbtfzyQg
+- 2. The Repo Setup: Hence, this repository was made!
+- 3. The UI/Circuit Milestone: A screen of the initial UI was shared.
+- 4. The Heart of The Project: A demo video showcasing our initial build was created. 
+
+---
+
+## Week 3: The Impact & Refinement Phase
+
+- 1. The Code Meme & Team Identity: A light-hearted round spent making meme collages.
+- 2. The Global Impact Mapping: An idenitification of the global impact our project contributed to was drafted. 
+- 3. The Core Error-Handling: We proved our code can handle chaotic user input, and dealt with edge cases.
+- 4. The Optimization Milestone: We optimized our app to run faster, and added various quality-of-life features. 
+
+---
+
+## Week 4
+
+- 1. The Code Contribution & Cleanup Check: We pushed all of our code to our repository and merged our branches, finalizing our project at last.
+- 2. The "Shark Tank" Pitch Tagline & Poster: A simple poster to pitch our project was created.
+- 3. The SDLC Lifecycle Mapping: A document of our build journey was drafted.
+- 4. The Production-Ready Technical README: The README.md file was finalized. 
+
+---
+
+# UN Sustainable Development Goals
+
+## SDG 9 — Industry, Innovation and Infrastructure
+
+SecureVault promotes secure and resilient digital infrastructure through modular cybersecurity-focused desktop software engineering and modern cryptographic implementation.
+
+---
+
+## SDG 16 — Peace, Justice and Strong Institutions
+
+SecureVault supports secure information management practices by helping users protect sensitive local files against unauthorized access, insecure deletion, and data exposure.
+
+---
+
+# Gallery
 
 ## 🖥️ DASHBOARD
 ![Dashboard](dashboard.png)
@@ -201,7 +354,22 @@ Copy-Item build\encryptor.exe dist\encryptor.exe
 
 # Contributors
 
-This application was created in collaboration with Faizah Hafeez (@faizahhafeez2-code), Sakina Fatima Mirza (@sakinastlw110), and myself (@silasiel) under the team name *Cipher Syndicate* for a junior-level technical competition conducted by our college. <br>
+Developed by Cipher Syndicate:
 
+- Faizah Hafeez — `@faizahhafeez2-code`
+- Sakina Fatima Mirza — `@sakinastlw110`
+- Silasiel — `@silasiel`
+
+---
+# Future Improvements
+
+- Multi-user vault support
+- Hardware-backed key storage
+- Secure cloud synchronization
+- Encrypted vault sharing
+- Role-based access permissions
+- Cross-platform Linux packaging
+
+---
 # License
 This project is licensed under the MIT License.
