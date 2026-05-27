@@ -1,6 +1,5 @@
 ![banner](assets/banner.jpeg)
 # SecureVault
-### Secure Local File Encryption and Vault Management
 
 SecureVault is a desktop-based encrypted file management system designed for secure local storage, encrypted file handling, and controlled access protection.
 
