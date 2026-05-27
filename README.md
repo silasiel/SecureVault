@@ -345,7 +345,7 @@ SecureVault supports secure information management practices by helping users pr
 </p>
 
 ---
-# Future Improvements
+# Possible Future Improvements
 
 - Multi-user vault support
 - Hardware-backed key storage
