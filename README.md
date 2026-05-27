@@ -25,7 +25,7 @@ SecureVault promotes secure and reliable digital infrastructure by providing a m
 
 SecureVault supports secure digital information management by helping users protect sensitive files against unauthorized access, brute-force attacks, accidental exposure, and insecure deletion practices through modern encryption and security-focused system design
 
-# core Features
+# Core Features
 - AES-256-GCM authenticated encryption
 - PBKDF2-HMAC-SHA256 key derivation
 - Randomized salts and initialization vectors
