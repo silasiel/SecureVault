@@ -278,7 +278,7 @@ This app was built for a junior-level technical competition conducted by our col
 
 ## Week 1: The Blueprint Blitz
 
-1. The Rough Draft: A summary of our initial plan for the project was drafted. 
+1. The Rough Draft: A summary of our initial plan for the project was drafted.  [Summary](challenges/InitialSummary.pdf)
 2. The Tech Justification: We researched and finalized our tech stack. [Tech Stack](challenges/TechStack.pdf)
 3. The Logic Flow Architecture: We created a simple wireframe to exhibit our idea. [Wireframe](challenges/Wireframe(1).pdf)
 
