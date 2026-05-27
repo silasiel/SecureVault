@@ -172,9 +172,32 @@ Copy-Item build\encryptor.exe dist\encryptor.exe
 - Faster C/OpenSSL cryptographic backend
 - Standalone desktop packaging
 - Organized logging and live search systems <br>
+# 📁 SecureVault Screenshots
 
-# Screenshots
-To be added <br>
+## 🖥️ Dashboard
+![Dashboard](dashboard.png)
+
+---
+
+## 🔐 Lock Screen
+![Lockout](lockout.png)
+
+---
+
+## 📜 Activity Logs
+![Logs](logs.png)
+
+---
+
+## 🔍 Search Interface
+![Search](search.png)
+
+---
+
+## 📊 Tracking Panel
+![Tracking](tracking.png)
+
+
 
 # Contributors
 
