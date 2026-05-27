@@ -178,8 +178,6 @@ To be added <br>
 
 # Contributors
 
-Developed by:
-
 This application was created in collaboration with Faizah Hafeez (@faizahhafeez2-code), Sakina Fatima Mirza (@sakinastlw110), and myself (@silasiel) under the team name *Cipher Syndicate* for a junior-level technical competition conducted by our college. <br>
 
 # License
