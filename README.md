@@ -325,27 +325,27 @@ SecureVault supports secure information management practices by helping users pr
 # Gallery
 
 ## 🖥️ DASHBOARD
-![Dashboard](dashboard.png)
+![Dashboard](assets/dashboard.png)
 
 ---
 
 ## 🔐 VAULT LOCKOUT PROTETCTION
-![Lockout](lockout.png)
+![Lockout](assets/lockout.png)
 
 ---
 
 ## 🔍 LIVE FILE SEARCH
-![Search](search.png)
+![Search](assets/search.png)
 
 ---
 
 ## 📜 INTRUSION DETECTION LOGS
-![Logs](logs.png)
+![Logs](assets/logs.png)
 
 ---
 
 ## 📊 ENCRYPTION TRACKING PROGRESS
-![Tracking](tracking.png)
+![Tracking](assets/tracking.png)
 
 
 
