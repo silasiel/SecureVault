@@ -39,7 +39,7 @@ SecureVault supports secure digital information management by helping users prot
 - Threaded encryption engine
 - Modular feature-based architecture <br>
 # System Architecture
-text
+``` text
 Tkinter GUI
       ↓
 Python Application Layer
@@ -47,7 +47,7 @@ Python Application Layer
 C Encryption Backend
       ↓
 OpenSSL AES-256-GCM Engine
-
+```
 The Python interface manages user interaction, vault operations, and application workflows, while the C backend performs cryptographic processing through OpenSSL for improved performance and security. <br> 
 # Technologies Used
 
@@ -66,87 +66,85 @@ The Python interface manages user interaction, vault operations, and application
 * Run the installer
 * Launch SecureVault from Desktop or Start Menu
 * If Windows SmartScreen appears, click: More Info → Run Anyway 
-### Method 2 — clone Repository
+## Method-2: Clone Repository
 
-bash 
+```bash
 git clone https://github.com/yourusername/securevault.git
+```
 
-bash
+```bash
 cd securevault
+```
 
+---
 
 ## Build Encryption Backend
 
-bash
+```bash
 mingw32-make clean
+```
 
-
-bash
+```bash
 mingw32-make
-
+```
 
 This generates:
 
-text
-build/encryptor.exe <br>
+```text
+build/encryptor.exe
+```
 
-bash
-cd securevault
-
-
-## Build Encryption Backend
-
-bash
-mingw32-make clean
-
-
-bash
-mingw32-make
-
-
-This generates:
-
-text
-build/encryptor.exe <br> 
+---
 
 ## Install Dependencies
 
-bash
-pip install -r requirements.txt <br>
+```bash
+pip install -r requirements.txt
+```
 
+---
 
 ## Run Application
 
-bash
-python gui/app.py <br>
+```bash
+python gui/app.py
+```
+
+---
 
 # To Package with PyInstaller
 
 ## Remove Old Builds
 
-powershell
-Remove-Item -Recurse -Force dist 
+```powershell
+Remove-Item -Recurse -Force dist
+```
 
-powershell
+```powershell
 Remove-Item -Recurse -Force build
+```
 
+```powershell
+Remove-Item -Force *.spec
+```
 
-powershell
-Remove-Item -Force *.spec <br>
+---
 
 ## Generate Executable
 
-powershell
+```powershell
 pyinstaller --onefile --windowed --icon=svicon.ico gui/app.py
-
+```
 
 ---
 
 ## Copy Encryption Backend
 
-powershell
+```powershell
 Copy-Item build\encryptor.exe dist\encryptor.exe
+```
 
+---
 
 # The Security Highlights
 
