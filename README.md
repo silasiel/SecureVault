@@ -15,48 +15,174 @@ The system integrates:
 - Secure file shredding
 - Encrypted backup export and recovery
 - Real-time encryption tracking. <br>
+# UN Sustainable Development Goal Alignment
 
-# Features
-* AES-GCM file encryption using OpenSSL
-* Password-protected secure folders
-* Drag-and-drop file support
-* File preview functionality
-* Secure file decryption
-* Vault-based file organization
-* Activity logging system
-* Desktop GUI for ease of use
-* Windows installer support <br>
+## SDG 9 — Industry, Innovation and Infrastructure
+
+SecureVault promotes secure and reliable digital infrastructure by providing a modern encrypted file management system focused on privacy, cybersecurity, and secure local data storage. The project combines modular software architecture, cryptographic security, and responsive desktop engineering practices to encourage safer digital environments and stronger cybersecurity awareness.
+
+## SDG 16 — Peace, Justice and Strong Institutions
+
+SecureVault supports secure digital information management by helping users protect sensitive files against unauthorized access, brute-force attacks, accidental exposure, and insecure deletion practices through modern encryption and security-focused system design
+
+# core Features
+- AES-256-GCM authenticated encryption
+- PBKDF2-HMAC-SHA256 key derivation
+- Randomized salts and initialization vectors
+- Intrusion detection logging
+- Temporary vault lockouts
+- Secure file shredding
+- Encrypted backup export and recovery
+- Live file search and filtering
+- Real-time encryption progress tracking
+- Drag-and-drop uploads
+- Threaded encryption engine
+- Modular feature-based architecture <br>
+# System Architecture
+text
+Tkinter GUI
+      ↓
+Python Application Layer
+      ↓
+C Encryption Backend
+      ↓
+OpenSSL AES-256-GCM Engine
+
+The Python interface manages user interaction, vault operations, and application workflows, while the C backend performs cryptographic processing through OpenSSL for improved performance and security. <br> 
+# Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| Python | GUI and application logic |
+| Tkinter | Desktop graphical interface |
+| C | Cryptographic backend |
+| OpenSSL | AES-GCM and PBKDF2 cryptography |
+| PyInstaller | Standalone executable packaging |
+| MinGW GCC | C compilation | <br>
 
 # Installation Guide
 ### Method 1 — Installer
 * Download SecureVault_Setup.exe from Releases
 * Run the installer
 * Launch SecureVault from Desktop or Start Menu
-* If Windows SmartScreen appears, click: More Info → Run Anyway
-### Method 2 — Running From Source
-Requirements
- - Python 3.12+
- - MinGW GCC
- - OpenSSL
-#### Steps
-- Build C Backend
-```bash
+* If Windows SmartScreen appears, click: More Info → Run Anyway 
+### Method 2 — clone Repository
+
+bash 
+git clone https://github.com/yourusername/securevault.git
+
+bash
+cd securevault
+
+
+## Build Encryption Backend
+
+bash
+mingw32-make clean
+
+
+bash
 mingw32-make
-```
-- Run GUI
-```bash
-python gui/app.py
-```
-<br>
+
+
+This generates:
+
+text
+build/encryptor.exe <br>
+
+bash
+cd securevault
+
+
+## Build Encryption Backend
+
+bash
+mingw32-make clean
+
+
+bash
+mingw32-make
+
+
+This generates:
+
+text
+build/encryptor.exe <br> 
+
+## Install Dependencies
+
+bash
+pip install -r requirements.txt <br>
+
+
+## Run Application
+
+bash
+python gui/app.py <br>
+
+# To Package with PyInstaller
+
+## Remove Old Builds
+
+powershell
+Remove-Item -Recurse -Force dist 
+
+powershell
+Remove-Item -Recurse -Force build
+
+
+powershell
+Remove-Item -Force *.spec <br>
+
+## Generate Executable
+
+powershell
+pyinstaller --onefile --windowed --icon=svicon.ico gui/app.py
+
+
+---
+
+## Copy Encryption Backend
+
+powershell
+Copy-Item build\encryptor.exe dist\encryptor.exe
+
+
+# The Security Highlights
+
+## Cryptographic Security
+
+- AES-256-GCM authenticated encryption
+- PBKDF2-HMAC-SHA256 key derivation
+- Randomized salts and IVs
+- Authentication tag verification
+- Tamper detection during decryption
+
+## System Security
+
+- Intrusion detection logs
+- Temporary vault lockouts
+- Password strength analysis
+- Secure file shredding
+- Encrypted backup portability <br>
+
+# Some Optimization Highlights
+
+- Modular feature-based architecture
+- Background threaded encryption
+- Responsive real-time progress tracking
+- Faster C/OpenSSL cryptographic backend
+- Standalone desktop packaging
+- Organized logging and live search systems <br>
 
 # Screenshots
 To be added <br>
 
-# Some Additional Security Notes
-- Files are encrypted using AES-GCM authenticated encryption
-- Password-protected folders prevent unauthorized access
-- Sensitive data is stored locally on the user’s machine
-- No cloud storage or external servers are used <br>
+# Contributors
+
+Developed by:
+
+This application was created in collaboration with Faizah Hafeez (@faizahhafeez2-code), Sakina Fatima Mirza (@sakinastlw110), and myself (@silasiel) under the team name *Cipher Syndicate* for a junior-level technical competition conducted by our college. <br>
 
 # License
 This project is licensed under the MIT License.
