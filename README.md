@@ -278,33 +278,33 @@ This app was built for a junior-level technical competition conducted by our col
 
 ## Week 1: The Blueprint Blitz
 
-- 1. The Rough Draft: A summary of our initial plan for the project was drafted. 
-- 2. The Tech Justification: We researched and finalized our tech stack.
-- 3. The Logic Flow Architecture: We created a simple wireframe to exhibit our idea.
+1. The Rough Draft: A summary of our initial plan for the project was drafted. 
+2. The Tech Justification: We researched and finalized our tech stack. 
+3. The Logic Flow Architecture: We created a simple wireframe to exhibit our idea.
 
 
 ## Week 2: The Deployment Powerplay
 
-- 1. The Motivation Track: https://youtu.be/2wOGbtfzyQg
-- 2. The Repo Setup: Hence, this repository was made!
-- 3. The UI/Circuit Milestone: A screen of the initial UI was shared.
-- 4. The Heart of The Project: A demo video showcasing our initial build was created. 
+1. The Motivation Track: https://youtu.be/2wOGbtfzyQg
+2. The Repo Setup: Hence, this repository was made!
+3. The UI/Circuit Milestone: A screen of the initial UI was shared.
+4. The Heart of The Project: A demo video showcasing our initial build was created. 
 
 
 ## Week 3: The Impact & Refinement Phase
 
-- 1. The Code Meme & Team Identity: A light-hearted round spent making meme collages.
-- 2. The Global Impact Mapping: An idenitification of the global impact our project contributed to was drafted. 
-- 3. The Core Error-Handling: We proved our code can handle chaotic user input, and dealt with edge cases.
-- 4. The Optimization Milestone: We optimized our app to run faster, and added various quality-of-life features. 
+1. The Code Meme & Team Identity: A light-hearted round spent making meme collages.
+2. The Global Impact Mapping: An idenitification of the global impact our project contributed to was drafted. 
+3. The Core Error-Handling: We proved our code can handle chaotic user input, and dealt with edge cases.
+4. The Optimization Milestone: We optimized our app to run faster, and added various quality-of-life features. 
 
 
 ## Week 4
 
-- 1. The Code Contribution & Cleanup Check: We pushed all of our code to our repository and merged our branches, finalizing our project at last.
-- 2. The "Shark Tank" Pitch Tagline & Poster: A simple poster to pitch our project was created.
-- 3. The SDLC Lifecycle Mapping: A document of our build journey was drafted.
-- 4. The Production-Ready Technical README: The README.md file was finalized. 
+1. The Code Contribution & Cleanup Check: We pushed all of our code to our repository and merged our branches, finalizing our project at last.
+2. The "Shark Tank" Pitch Tagline & Poster: A simple poster to pitch our project was created.
+3. The SDLC Lifecycle Mapping: A document of our build journey was drafted. [SDLC Lifecycle Report](challenges/SDLCreport.pdf)
+4. 4. The Production-Ready Technical README: The README.md file was finalized. 
 
 ---
 
