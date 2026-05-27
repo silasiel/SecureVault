@@ -282,7 +282,6 @@ This app was built for a junior-level technical competition conducted by our col
 - 2. The Tech Justification: We researched and finalized our tech stack.
 - 3. The Logic Flow Architecture: We created a simple wireframe to exhibit our idea.
 
----
 
 ## Week 2: The Deployment Powerplay
 
@@ -291,7 +290,6 @@ This app was built for a junior-level technical competition conducted by our col
 - 3. The UI/Circuit Milestone: A screen of the initial UI was shared.
 - 4. The Heart of The Project: A demo video showcasing our initial build was created. 
 
----
 
 ## Week 3: The Impact & Refinement Phase
 
@@ -300,7 +298,6 @@ This app was built for a junior-level technical competition conducted by our col
 - 3. The Core Error-Handling: We proved our code can handle chaotic user input, and dealt with edge cases.
 - 4. The Optimization Milestone: We optimized our app to run faster, and added various quality-of-life features. 
 
----
 
 ## Week 4
 
