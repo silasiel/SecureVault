@@ -339,7 +339,9 @@ SecureVault supports secure information management practices by helping users pr
 </p>
 
 <p align="center">
- @faizahhafeez2-code • @silasiel • @sakinastlw110
+  <a href="https://github.com/silasiel">@silasiel</a><br>
+  <a href="https://github.com/faizahhafeez2-code">@faizahhafeez2-code</a><br>
+  <a href="https://github.com/sakinastlw110">@sakinastlw110</a>
 </p>
 
 ---
