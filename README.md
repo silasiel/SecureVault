@@ -174,27 +174,27 @@ Copy-Item build\encryptor.exe dist\encryptor.exe
 - Organized logging and live search systems <br>
 # 📁 SecureVault Screenshots
 
-## 🖥️ Dashboard
+## 🖥️ DASHBOARD
 ![Dashboard](dashboard.png)
 
 ---
 
-## 🔐 Lock Screen
+## 🔐 VAULT LOCKOUT PROTETCTION
 ![Lockout](lockout.png)
 
 ---
 
-## 📜 Activity Logs
-![Logs](logs.png)
-
----
-
-## 🔍 Search Interface
+## 🔍 LIVE FILE SEARCH
 ![Search](search.png)
 
 ---
 
-## 📊 Tracking Panel
+## 📜 INTRUSION DETECTION LOGS
+![Logs](logs.png)
+
+---
+
+## 📊 ENCRYPTION TRACKING PROGRESS
 ![Tracking](tracking.png)
 
 
