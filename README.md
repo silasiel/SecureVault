@@ -1,7 +1,7 @@
 # SecureVault
 SecureVault is a secure desktop file storage application that allows users to encrypt, organize, preview, and manage sensitive files through a simple graphical interface. The project combines the performance of C-based cryptography with the usability of a Python GUI to create a secure and accessible file protection system.  <br>
 ## Developed by:
-This app was created in collaboration with Faizah Hafeez(@faizahhafeez2-code), Sakina Fatima Mirza(@sakinastlw110), and myself(@silasiel) for a technical competition conducted by our college. <br>
+This app was created in collaboration with Faizah Hafeez(@faizahhafeez2-code), Sakina Fatima Mirza(@sakinastlw110), and myself(@silasiel) under the team name "Cipher Syndicate" for a junior level technical competition conducted by our . <br>
 
 # Features
 * AES-GCM file encryption using OpenSSL
@@ -15,7 +15,7 @@ This app was created in collaboration with Faizah Hafeez(@faizahhafeez2-code), S
 * Windows installer support <br>
 
 # Installation Guide
-### Method 1 — Installer (Recommended)
+### Method 1 — Installer
 * Download SecureVault_Setup.exe from Releases
 * Run the installer
 * Launch SecureVault from Desktop or Start Menu
