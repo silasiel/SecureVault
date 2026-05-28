@@ -284,7 +284,7 @@ This app was built for a junior-level technical competition conducted by our col
 1. The Code Contribution & Cleanup Check: We pushed all of our code to our repository and merged our branches, finalizing our project at last. 
 2. The "Shark Tank" Pitch Tagline & Poster: A simple poster to pitch our project was created. [Poster](challenges/Posterpitch.jpeg)
 3. The SDLC Lifecycle Mapping: A document of our build journey was drafted. [SDLC Lifecycle Report](challenges/SDLCreport.pdf)
-4. 4. The Production-Ready Technical README: The README.md file was finalized. 
+4. The Production-Ready Technical README: The README.md file was finalized. 
 
 ---
 
