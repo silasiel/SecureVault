@@ -58,7 +58,8 @@ The platform focuses on strong cryptographic implementation, modular backend sep
 | Secure File Shredding | Controlled irreversible deletion |
 | Encrypted Recovery | Export and restoration of encrypted backups |
 | Real-Time Tracking | Live encryption and decryption progress monitoring |
-| Threaded Processing | Background cryptographic execution |
+| Threaded Processing | Encrypted File Export | Export encrypted files for secure storage and sharing |
+| Encrypted File Import | Import previously encrypted files into the vault without exposing plaintext data || Background cryptographic execution |
 | Vault Search System | Live file filtering and lookup |
 
 ---
