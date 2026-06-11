@@ -31,7 +31,8 @@ def ask_password(
     ACCENT,
     ACCENT_TEXT,
     title="Password",
-    prompt="Enter Password"
+    prompt="Enter Password",
+    show_strength=False
 ):
 
     win = tk.Toplevel(root)
@@ -63,14 +64,7 @@ def ask_password(
 
     entry.pack(pady=5)
 
-    strength_label = tk.Label(
-        win,
-        text="Strength: ",
-        bg=APP_BG,
-        fg=TEXT_SECONDARY
-    )
-
-    strength_label.pack(pady=5)
+    strength_label = None
 
     def update_strength(*args):
 
@@ -99,10 +93,19 @@ def ask_password(
                 fg="green"
             )
 
-    password_var.trace_add(
-        "write",
-        update_strength
-    )
+    if show_strength:
+        strength_label = tk.Label(
+            win,
+            text="Strength: ",
+            bg=APP_BG,
+            fg=TEXT_SECONDARY
+        )
+
+        strength_label.pack(pady=5)
+        password_var.trace_add(
+            "write",
+            update_strength
+        )
 
     def submit():
 

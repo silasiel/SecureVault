@@ -114,10 +114,16 @@ def create_new_folder():
 
     create_folder(name)
 
-    pwd = simpledialog.askstring(
-        "Set Password",
-        f"Set password for '{name}':",
-        show="*"
+    pwd = ask_password(
+        root,
+        APP_BG,
+        TEXT_PRIMARY,
+        TEXT_SECONDARY,
+        ACCENT,
+        ACCENT_TEXT,
+        title="Set Password",
+        prompt=f"Set password for '{name}':",
+        show_strength=True
     )
 
     if pwd:
@@ -149,10 +155,16 @@ def open_folder(folder):
 
     if result is None:
 
-        pwd = simpledialog.askstring(
-            "Set Password",
-            f"Set password for '{folder}':",
-            show="*"
+        pwd = ask_password(
+            root,
+            APP_BG,
+            TEXT_PRIMARY,
+            TEXT_SECONDARY,
+            ACCENT,
+            ACCENT_TEXT,
+            title="Set Password",
+            prompt=f"Set password for '{folder}':",
+            show_strength=True
         )
 
         if not pwd:
