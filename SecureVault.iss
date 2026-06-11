@@ -1,21 +1,17 @@
 [Setup]
 AppName=SecureVault
-AppVersion=1.0
-DefaultDirName={autopf}\SecureVault
+AppVersion=1.1
+DefaultDirName={pf}\SecureVault
 DefaultGroupName=SecureVault
-OutputDir=installer
+OutputDir=.
 OutputBaseFilename=SecureVault_Setup
 Compression=lzma
 SolidCompression=yes
-SetupIconFile=svicon.ico
+WizardStyle=modern
 
 [Files]
 Source: "dist\SecureVault.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "dist\encryptor.exe"; DestDir: "{app}"; Flags: ignoreversion
-
-[Dirs]
-Name: "{app}\vault"
-Name: "{app}\logs"
 
 [Icons]
 Name: "{group}\SecureVault"; Filename: "{app}\SecureVault.exe"

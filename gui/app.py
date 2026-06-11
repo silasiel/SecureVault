@@ -297,7 +297,10 @@ def run_encrypt_thread():
         TEXT_PRIMARY,
         TEXT_SECONDARY,
         ACCENT,
-        ACCENT_TEXT
+        ACCENT_TEXT,
+        title="Encrypt Files",
+        prompt="Enter password for encryption",
+        show_strength=True
     )
 
     if not password:
@@ -345,10 +348,12 @@ def decrypt_file(file):
     if not output:
         return
 
+    creationflags = subprocess.CREATE_NO_WINDOW if hasattr(subprocess, 'CREATE_NO_WINDOW') else 0
     result = subprocess.run(
         [EXECUTABLE, "decrypt", input_path, output, password],
         capture_output=True,
-        text=True
+        text=True,
+        creationflags=creationflags
     )
 
     if result.returncode != 0:
@@ -653,7 +658,7 @@ def run_import_backup():
 root.grid_rowconfigure(0, weight=1)
 root.grid_columnconfigure(1, weight=1)
 
-sidebar = tk.Frame(root, bg=SIDEBAR_BG, width=260)
+sidebar = tk.Frame(root, bg=SIDEBAR_BG, width=230)
 sidebar.grid(row=0, column=0, sticky="ns")
 sidebar.grid_propagate(False)
 
@@ -818,8 +823,40 @@ progress = ttk.Progressbar(
 progress.pack(fill="x", padx=20, pady=5)
 
 
-file_list_frame = tk.Frame(main, bg=APP_BG)
-file_list_frame.pack(fill="both", expand=True)
+file_list_canvas = tk.Canvas(
+    main,
+    bg=APP_BG,
+    highlightthickness=0
+)
+
+file_list_frame = tk.Frame(file_list_canvas, bg=APP_BG)
+file_list_window = file_list_canvas.create_window((0, 0), window=file_list_frame, anchor="nw")
+
+file_list_canvas.pack(fill="both", expand=True, padx=20, pady=(0, 0))
+
+
+def _update_file_scrollregion(event=None):
+    file_list_canvas.configure(scrollregion=file_list_canvas.bbox("all"))
+
+
+def _resize_file_list_window(event=None):
+    file_list_canvas.itemconfig(file_list_window, width=event.width)
+
+file_list_frame.bind("<Configure>", _update_file_scrollregion)
+file_list_canvas.bind("<Configure>", _resize_file_list_window)
+
+
+def _on_file_list_mousewheel(event):
+    if event.delta:
+        file_list_canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+    elif event.num == 4:
+        file_list_canvas.yview_scroll(-1, "units")
+    elif event.num == 5:
+        file_list_canvas.yview_scroll(1, "units")
+
+file_list_canvas.bind_all("<MouseWheel>", _on_file_list_mousewheel)
+file_list_canvas.bind_all("<Button-4>", _on_file_list_mousewheel)
+file_list_canvas.bind_all("<Button-5>", _on_file_list_mousewheel)
 
 
 status_label = tk.Label(

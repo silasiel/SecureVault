@@ -4,10 +4,12 @@ from tkinter import messagebox
 
 def check_backend(executable):
     try:
+        creationflags = subprocess.CREATE_NO_WINDOW if hasattr(subprocess, 'CREATE_NO_WINDOW') else 0
         subprocess.run(
             [executable],
             stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE
+            stderr=subprocess.PIPE,
+            creationflags=creationflags
         )
         return True
 
@@ -20,10 +22,12 @@ def check_backend(executable):
 
 
 def run_command(cmd):
+    creationflags = subprocess.CREATE_NO_WINDOW if hasattr(subprocess, 'CREATE_NO_WINDOW') else 0
     result = subprocess.run(
         cmd,
         capture_output=True,
-        text=True
+        text=True,
+        creationflags=creationflags
     )
 
     if result.returncode != 0:

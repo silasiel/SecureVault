@@ -70,10 +70,12 @@ def preview_file(
         temp_dir = tempfile.mkdtemp()
         temp_path = os.path.join(temp_dir, file[:-4] if file.lower().endswith('.enc') else file)
 
+        creationflags = subprocess.CREATE_NO_WINDOW if hasattr(subprocess, 'CREATE_NO_WINDOW') else 0
         result = subprocess.run(
             [executable, "decrypt", path, temp_path, password],
             capture_output=True,
-            text=True
+            text=True,
+            creationflags=creationflags
         )
 
         if result.returncode != 0 or not os.path.exists(temp_path):
@@ -127,12 +129,14 @@ def preview_file(
         )
         return
 
+    creationflags = subprocess.CREATE_NO_WINDOW if hasattr(subprocess, 'CREATE_NO_WINDOW') else 0
     result = subprocess.run(
         [executable, "preview", path],
         capture_output=True,
         text=True,
         encoding="utf-8",
-        errors="ignore"
+        errors="ignore",
+        creationflags=creationflags
     )
 
     win = tk.Toplevel(root)

@@ -45,7 +45,8 @@ def encrypt_files(files, folder, password, executable):
     cmd.append(folder_path)
     cmd.append(password)
 
-    subprocess.run(cmd)
+    creationflags = subprocess.CREATE_NO_WINDOW if hasattr(subprocess, 'CREATE_NO_WINDOW') else 0
+    subprocess.run(cmd, creationflags=creationflags, capture_output=True)
 
 # DELETE
 def delete_file(folder, file):
