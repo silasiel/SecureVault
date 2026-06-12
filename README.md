@@ -279,37 +279,35 @@ Copy-Item build\encryptor.exe dist\encryptor.exe
 
 ## Week 1
 
-- Initial vault architecture planning
-- Encryption workflow research
-- Cryptographic backend structure
-- GUI layout drafting
+1. The Rough Draft: An [initial summary](
+2. Tech Justification: 
+3. The Logic Flow Architecture:
 
 ---
 
 ## Week 2
 
-- Repository setup
-- OpenSSL integration
-- AES-GCM encryption implementation
-- File vault system creation
-
+1. The Motivation Track: We submitted a playlist that suited our workflow.
+2. The Repo setup: Hence this repository was made!
+3. The UI/Circuit Milestone: a screenshot of our initial ui was submitted.
+4. The Heart of the Project: a demo video of our project's core logic was shared.
 ---
 
 ## Week 3
 
-- Intrusion detection system
-- Secure shredding implementation
-- Backup recovery workflows
-- Progress tracking integration
+1. The Code Meme & Team Identity: We submitted a meme template to share our build experience.
+2. The Global Impact Mapping: A draft of our the SDGs our project addresses was created.
+3. The Core Error Handling: The core error handling was documented.
+4. The Optimization Milestone: A demo video of our optimizations was submitted.
 
 ---
 
 ## Week 4
 
-- Optimization and testing
-- Packaging pipeline
-- UI refinement
-- Documentation and deployment preparation
+1. The Code Contribution & Cleanup Check: A link to our repository was shared.
+3. The "Shark Tank" Pitch Tagline & Poster: A poster for our project was created.
+4.  The SDLC Lifecycle Mapping: A SDLC document was drafted.
+5.  The Production-Ready Technical README: Our README was finalized.
 
 ---
 
