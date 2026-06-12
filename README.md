@@ -279,34 +279,34 @@ Copy-Item build\encryptor.exe dist\encryptor.exe
 
 ## Week 1
 
-1. The Rough Draft: An [initial summary](
-2. Tech Justification: 
-3. The Logic Flow Architecture:
+1. The Rough Draft: An [initial summary](challenges/InitialSummary.pdf) was drafted.
+2. Tech Justification: We finalized our [tech stack](challenges/TechStack.pdf)
+3. The Logic Flow Architecture: An initial wireframe was created.
 
 ---
 
 ## Week 2
 
-1. The Motivation Track: We submitted a playlist that suited our workflow.
+1. The Motivation Track: We submitted a [playlist](https://youtu.be/2wOGbtfzyQg?si=6IM9DhCG-AUuzwGx) that suited our workflow.
 2. The Repo setup: Hence this repository was made!
 3. The UI/Circuit Milestone: a screenshot of our initial ui was submitted.
-4. The Heart of the Project: a demo video of our project's core logic was shared.
+4. The Heart of the Project: a [demo video](challenges/demo1.mp4) of our project's core logic was shared. 
 ---
 
 ## Week 3
 
-1. The Code Meme & Team Identity: We submitted a meme template to share our build experience.
-2. The Global Impact Mapping: A draft of our the SDGs our project addresses was created.
-3. The Core Error Handling: The core error handling was documented.
-4. The Optimization Milestone: A demo video of our optimizations was submitted.
+1. The Code Meme & Team Identity: We submitted a meme template to share our build experience. 
+2. The Global Impact Mapping: A draft of our the [SDGs](challenges/SDG.pdf) our project addresses was created.
+3. The Core Error Handling: The core [error handling](challenges/errorhandling.pdf) was documented.
+5. The Optimization Milestone: A [demo video](challenges/demo2.mp4) of our optimizations was submitted.
 
 ---
 
 ## Week 4
 
 1. The Code Contribution & Cleanup Check: A link to our repository was shared.
-3. The "Shark Tank" Pitch Tagline & Poster: A poster for our project was created.
-4.  The SDLC Lifecycle Mapping: A SDLC document was drafted.
+3. The "Shark Tank" Pitch Tagline & Poster: A [poster](challenges/poster.jpg) for our project was created.
+4.  The SDLC Lifecycle Mapping: A [SDLC](challenges/SDLCreport.pdf) ocument was drafted.
 5.  The Production-Ready Technical README: Our README was finalized.
 
 ---
