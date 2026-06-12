@@ -1,3 +1,4 @@
+![Project banner](assets/banner.jpeg)
 # SecureVault
 ### Secure Local File Encryption and Vault Management
 
