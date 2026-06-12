@@ -159,26 +159,6 @@ Recovered Output File
 
 ---
 
-# Repository Structure
-
-```text
-SecureVault/
-│
-├── gui/
-├── backend/
-├── encryption/
-├── decryption/
-├── authentication/
-├── vault/
-├── logs/
-├── backups/
-├── tests/
-├── assets/
-└── README.md
-```
-
----
-
 # Installation
 
 ## Method 1 — Download Release
