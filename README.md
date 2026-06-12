@@ -371,7 +371,7 @@ Add screenshot here
 # Contributors
 
 <p align="center">
-  <img src="assets/contributors.png" width="450"/>
+  <img src="assets/teams.jpeg" width="450"/>
 </p>
 
 <p align="center">
