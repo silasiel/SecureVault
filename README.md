@@ -329,7 +329,7 @@ SecureVault supports secure information management practices by helping users pr
 
 ## Main Dashboard
 
-Add screenshot here
+![md](assets/25849.png)
 
 ---
 
@@ -347,13 +347,19 @@ Add screenshot here
 
 ## Live File Search
 
-Add screenshot here
+![ls](assets/223820.png)
 
 ---
 
 ## Vault Lockout Protection
 
-![vl](assets/Screenshot 2026-06-11 125849.png)
+![vl](assets/115608.png)
+
+---
+
+## Exporting Files
+
+![ef](assets/131308.png)
 
 ---
 
