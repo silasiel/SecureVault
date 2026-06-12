@@ -372,7 +372,7 @@ Add screenshot here
 # Contributors
 
 <p align="center">
-  <img src="assets/teams.jpeg" width="450"/>
+  <img src="assets/team.jpeg" width="450"/>
 </p>
 
 <p align="center">
