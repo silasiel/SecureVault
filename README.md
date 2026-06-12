@@ -333,18 +333,6 @@ SecureVault supports secure information management practices by helping users pr
 
 ---
 
-## Encryption Progress Tracking
-
-Add screenshot here
-
----
-
-## Intrusion Detection Logs
-
-Add screenshot here
-
----
-
 ## Live File Search
 
 ![ls](assets/223820.png)
