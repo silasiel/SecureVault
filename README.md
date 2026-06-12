@@ -60,12 +60,13 @@ The platform focuses on strong cryptographic implementation, modular backend sep
 | Real-Time Tracking | Live encryption and decryption progress monitoring |
 | Threaded Processing | Background cryptographic execution |
 | Vault Search System | Live file filtering and lookup |
+| Import and Export | Allows portability of data |
 
 ---
 
 # System Architecture
 
-text
+```text
 +---------------------------------------------------+
 |                 Tkinter Desktop GUI               |
 +---------------------------------------------------+
@@ -77,6 +78,7 @@ text
 +---------------------------------------------------+
 |        OpenSSL AES-256-GCM Cryptography           |
 +---------------------------------------------------+
+```
 
 
 The Python layer manages application workflows, vault state management, user interaction, and file operations.
@@ -113,7 +115,7 @@ The C backend handles cryptographic execution through OpenSSL libraries to impro
 
 ## Encryption Pipeline
 
-text
+```text
 User File
     ↓
 Password Validation
@@ -123,13 +125,13 @@ PBKDF2 Key Derivation
 AES-256-GCM Encryption
     ↓
 Secure Vault Storage
-
+```
 
 ---
 
 ## Decryption Pipeline
 
-text
+```text
 Encrypted Vault File
         ↓
 Password Authentication
@@ -139,7 +141,7 @@ Authentication Tag Validation
 AES-256-GCM Decryption
         ↓
 Recovered Output File
-
+```
 
 ---
 
@@ -158,7 +160,7 @@ Recovered Output File
 
 # Repository Structure
 
-text
+```text
 SecureVault/
 │
 ├── gui/
@@ -172,7 +174,7 @@ SecureVault/
 ├── tests/
 ├── assets/
 └── README.md
-
+```
 
 ---
 
@@ -185,9 +187,9 @@ SecureVault/
 3. Launch SecureVault from Desktop or Start Menu  
 4. If Windows SmartScreen appears:
 
-text
+```text
 More Info → Run Anyway
-
+```
 
 ---
 
@@ -195,41 +197,41 @@ More Info → Run Anyway
 
 ### Clone Repository
 
-bash
+```bash
 git clone https://github.com/yourusername/securevault.git
 cd securevault
-
+```
 
 ---
 
 ### Build Encryption Backend
 
-bash
+```bash
 mingw32-make clean
 mingw32-make
-
+```
 
 Generated binary:
 
-text
+```text
 build/encryptor.exe
-
+```
 
 ---
 
 ### Install Python Dependencies
 
-bash
+```bash
 pip install -r requirements.txt
-
+```
 
 ---
 
 ### Run Application
 
-bash
+```bash
 python gui/app.py
-
+```
 
 ---
 
@@ -237,27 +239,27 @@ python gui/app.py
 
 ## Clean Previous Builds
 
-powershell
+```powershell
 Remove-Item -Recurse -Force dist
 Remove-Item -Recurse -Force build
 Remove-Item -Force *.spec
-
+```
 
 ---
 
 ## Generate Executable
 
-powershell
+```powershell
 pyinstaller --onefile --windowed --icon=svicon.ico gui/app.py
-
+```
 
 ---
 
 ## Copy Encryption Backend
 
-powershell
+```powershell
 Copy-Item build\encryptor.exe dist\encryptor.exe
-
+```
 
 ---
 
@@ -358,25 +360,29 @@ Add screenshot here
 
 # Future Improvements
 
-- Multi-user vault support
-- Hardware-backed key storage
-- Secure cloud synchronization
-- Encrypted vault sharing
-- Role-based access permissions
-- Cross-platform Linux packaging
+- Biometric authentication
+- Cloud synchronization
+- Multi-device vaults
+- Secure sharing
+
 
 ---
 
 # Contributors
 
-Developed by Cipher Syndicate:
+<p align="center">
+  <img src="assets/contributors.png" width="450"/>
+</p>
 
+<p align="center">
+  Developed by <strong>Team Cipher Syndicate</strong>
+</p>
 
-- Faizah Hafeez — @faizahhafeez2-code
-- Sakina Fatima Mirza — @sakinastlw110
-- Silasiel — @silasiel
-
-Built for a junior-level technical competition conducted by our college.
+<p align="center">
+  <a href="https://github.com/silasiel">@silasiel</a><br>
+  <a href="https://github.com/faizahhafeez2-code">@faizahhafeez2-code</a><br>
+  <a href="https://github.com/sakinastlw110">@sakinastlw110</a>
+</p>
 
 ---
 
