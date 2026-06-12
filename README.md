@@ -353,7 +353,7 @@ Add screenshot here
 
 ## Vault Lockout Protection
 
-Add screenshot here
+![vl](assets/Screenshot 2026-06-11 125849.png)
 
 ---
 
