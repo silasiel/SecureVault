@@ -36,7 +36,7 @@ def preview_file(
     APP_BG,
     CARD_BG,
     TEXT_PRIMARY,
-    ask_password=None
+    master_password=None
 ):
 
     path = os.path.join(
@@ -46,25 +46,11 @@ def preview_file(
     )
 
     if is_image_file(file):
-        if ask_password is None:
+        if master_password is None:
             messagebox.showinfo(
                 "Preview Not Available",
-                "Image preview requires a password prompt."
+                "Unlock the vault before previewing encrypted images."
             )
-            return
-
-        password = ask_password(
-            root,
-            APP_BG,
-            TEXT_PRIMARY,
-            TEXT_PRIMARY,
-            TEXT_PRIMARY,
-            TEXT_PRIMARY,
-            title="Image Preview",
-            prompt=f"Enter password for '{file}'"
-        )
-
-        if not password:
             return
 
         temp_dir = tempfile.mkdtemp()
@@ -72,7 +58,7 @@ def preview_file(
 
         creationflags = subprocess.CREATE_NO_WINDOW if hasattr(subprocess, 'CREATE_NO_WINDOW') else 0
         result = subprocess.run(
-            [executable, "decrypt", path, temp_path, password],
+            [executable, "decrypt", path, temp_path, master_password],
             capture_output=True,
             text=True,
             creationflags=creationflags
